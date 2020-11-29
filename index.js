@@ -1,14 +1,27 @@
+// const sum = (a) => {
+//     let subtotal = a;
+//
+//     function f(b) {
+//         subtotal += b;
+//         return f;
+//     }
+//
+//     // f.toString = () => {
+//     //     return subtotal;
+//     // };
+//
+//     return f;
+// };
+//
+// alert('sum(3)(4) = ' +  sum(3)(4)(1));
+
 const sum = (a) => {
     let subtotal = a;
 
     function f(b) {
         subtotal += b;
-        return f;
-    }
-
-    f.toString = () => {
         return subtotal;
-    };
+    }
 
     return f;
 };
@@ -23,6 +36,7 @@ let user = {
     }
 };
 
-let clone = JSON.parse(JSON.stringify(user));
+// let clone = JSON.parse(JSON.stringify(user));
+let clone = {...user};
 
 console.log("Obj user:", user, "Obj clone:", clone);
